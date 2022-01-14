@@ -11,4 +11,9 @@ class ApplicationController < Sinatra::Base
     bike_rides.to_json
   end
 
+  get "/riders" do
+    riders = Rider.all
+    riders.to_json
+  end
+
 end
