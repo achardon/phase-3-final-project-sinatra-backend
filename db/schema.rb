@@ -10,17 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_14_161527) do
+ActiveRecord::Schema.define(version: 2022_01_15_025353) do
 
   create_table "bike_rides", force: :cascade do |t|
     t.string "name"
-    t.integer "distance"
     t.string "description"
     t.integer "rider_id"
+    t.integer "route_id"
+    t.string "date"
   end
 
   create_table "riders", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string "title"
+    t.integer "distance"
+    t.string "directions"
+    t.string "difficulty"
   end
 
 end
