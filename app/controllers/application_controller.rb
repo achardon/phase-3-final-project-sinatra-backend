@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    { message: "~an app created to track all of your bike rides~" }.to_json
   end
 
   get "/bike_rides" do
@@ -14,6 +14,11 @@ class ApplicationController < Sinatra::Base
   get "/riders" do
     riders = Rider.all
     riders.to_json(include: :bike_rides)
+  end
+
+  get "/routes" do
+    routes = Route.all
+    routes.to_json(include: :riders)
   end
 
 end
