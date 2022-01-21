@@ -13,3 +13,7 @@ use Rack::JSONBodyParser
 
 # Our application
 run ApplicationController
+use BikeRidesController
+use RidersController
+use RoutesController
+use GoalsController
