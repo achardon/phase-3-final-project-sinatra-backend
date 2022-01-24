@@ -1,11 +1,12 @@
 #Quesions
 -how to get name of rider instead of id on goals page (line 9 of Goal)
     - line 15 on BikeRides - shouldn't this give the name of the rider? Why undefined?
--quesion on line 10 of Ride.js
+-quesion on line 10 of Ride.js (.thens not working with delete fetch, same thing for Goal.js)
 -How to display info about route in bike rides (route name, distance)
 -how to create new route based on rider's input "other" when adding new ride and have it added to data base (currently the route_id is 0 if route is "other" - why 0 and not null or undefined?)
 -how to get riders' bike rides in columns instead of stacked
 -how to get photo image on home page to be centered (already tried all the CSS I could find - justify-center, text-center, content-center, justify-self-center, etc.)
+-can I have access to Phase 4?
 
 #MVP
 -display each user
