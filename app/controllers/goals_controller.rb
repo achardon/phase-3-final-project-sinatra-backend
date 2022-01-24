@@ -2,7 +2,7 @@ class GoalsController < Sinatra::Base
 
     get "/goals" do
         goals = Goal.all
-        goals.to_json
+        goals.to_json(include: :rider)
     end
 
     post "/goals" do
@@ -10,7 +10,7 @@ class GoalsController < Sinatra::Base
             goal: params[:goal],
             rider_id: params[:rider_id]
         )
-        new_goal.to_json
+        new_goal.to_json(include: :rider)
     end
 
     delete "/goals/:id" do

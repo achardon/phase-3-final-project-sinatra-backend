@@ -2,7 +2,7 @@ class BikeRidesController < Sinatra::Base
 
     get "/bike_rides" do
         bike_rides = BikeRide.all
-        bike_rides.to_json
+        bike_rides.to_json(include: :route)
       end
     
       post "/bike_rides" do
