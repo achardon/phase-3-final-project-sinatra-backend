@@ -16,6 +16,14 @@ class BikeRidesController < Sinatra::Base
         )
         bike_ride.to_json
       end
+
+      patch "/bike_rides/:id" do
+        bike_ride = BikeRide.find(params[:id])
+        bike_ride.update(
+          params
+        )
+        bike_ride.to_json
+      end
     
       delete "/bike_rides/:id" do
         bike_ride = BikeRide.find(params[:id])
