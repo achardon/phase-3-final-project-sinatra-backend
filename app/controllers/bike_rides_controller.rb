@@ -3,9 +3,9 @@ class BikeRidesController < Sinatra::Base
     get "/bike_rides" do
         bike_rides = BikeRide.all
         bike_rides.to_json(include: :route)
-      end
+    end
     
-      post "/bike_rides" do
+    post "/bike_rides" do
         # binding.pry
         bike_ride = BikeRide.create(
           name: params[:name],
@@ -15,10 +15,9 @@ class BikeRidesController < Sinatra::Base
           route_id: params[:route_id]
         )
         bike_ride.to_json
-      end
+    end
 
-      patch "/bike_rides/:id" do
-        binding.pry
+    patch "/bike_rides/:id" do
         bike_ride = BikeRide.find(params[:id])
         bike_ride.update(
           name: params[:name],
@@ -26,24 +25,11 @@ class BikeRidesController < Sinatra::Base
           date: params[:date]
         )
         bike_ride.to_json
-      end
-
-        #       => {"date"=>"Nov 4",
-        #  "description"=>"sunny and cold",
-        #  "id"=>"50",
-        #  "name"=>"Morning Ride",
-        #  "rider_id"=>1,
-        #  "route"=>
-        #   {"difficulty"=>"easy",
-        #    "directions"=>"Up Orchard, around the East Orchard loop, back home",
-        #    "distance"=>4,
-        #    "id"=>1,
-        #    "title"=>"East Orchard Loop"},
-        #  "route_id"=>1}
+    end
     
-      delete "/bike_rides/:id" do
+    delete "/bike_rides/:id" do
         bike_ride = BikeRide.find(params[:id])
         bike_ride.destroy
-      end
+    end
 
 end
