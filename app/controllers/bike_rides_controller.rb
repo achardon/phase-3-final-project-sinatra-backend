@@ -18,12 +18,28 @@ class BikeRidesController < Sinatra::Base
       end
 
       patch "/bike_rides/:id" do
+        binding.pry
         bike_ride = BikeRide.find(params[:id])
         bike_ride.update(
-          params
+          name: params[:name],
+          description: params[:description],
+          date: params[:date]
         )
         bike_ride.to_json
       end
+
+        #       => {"date"=>"Nov 4",
+        #  "description"=>"sunny and cold",
+        #  "id"=>"50",
+        #  "name"=>"Morning Ride",
+        #  "rider_id"=>1,
+        #  "route"=>
+        #   {"difficulty"=>"easy",
+        #    "directions"=>"Up Orchard, around the East Orchard loop, back home",
+        #    "distance"=>4,
+        #    "id"=>1,
+        #    "title"=>"East Orchard Loop"},
+        #  "route_id"=>1}
     
       delete "/bike_rides/:id" do
         bike_ride = BikeRide.find(params[:id])
