@@ -1,6 +1,8 @@
 #Quesions
 -README - for react frontend, should I keep what is in there by default?
 -how to create new route based on rider's input "other" when adding new ride and have it added to data base (currently the route_id is 0 if route is "other" - why 0 and not null or undefined?)
+    - "accepts nested attributes for" - need this as a macro to add the ride and the route
+    - it would first check to see if route exists, if not it will create route, then create ride 
 
 #Already answered
 -how to get name of route on bike rides page (in active record, BikeRide.first.route.title works - why not on frontend? Isn't that why the macros are defined in the models?)

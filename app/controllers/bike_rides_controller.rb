@@ -6,7 +6,6 @@ class BikeRidesController < Sinatra::Base
     end
     
     post "/bike_rides" do
-        # binding.pry
         bike_ride = BikeRide.create(
           name: params[:name],
           date: params[:date],
