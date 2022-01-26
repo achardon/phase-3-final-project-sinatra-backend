@@ -1,11 +1,14 @@
 #Quesions
+-README - for react frontend, should I keep what is in there by default?
+-how to create new route based on rider's input "other" when adding new ride and have it added to data base (currently the route_id is 0 if route is "other" - why 0 and not null or undefined?)
+
+#Already answered
 -how to get name of route on bike rides page (in active record, BikeRide.first.route.title works - why not on frontend? Isn't that why the macros are defined in the models?)
 -how to get name of rider instead of id on goals page (line 9 of Goal)
 -question on line 10 of Ride.js (.thens not working with delete fetch, same thing for Goal.js)
--how to create new route based on rider's input "other" when adding new ride and have it added to data base (currently the route_id is 0 if route is "other" - why 0 and not null or undefined?)
+-can I have access to Phase 4?
 -how to get riders' bike rides in columns instead of stacked
 -how to get photo image on home page to be centered (already tried all the CSS I could find - justify-center, text-center, content-center, justify-self-center, etc.)
--can I have access to Phase 4?
 
 #MVP
 -display each user

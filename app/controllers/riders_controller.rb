@@ -6,4 +6,11 @@ class RidersController < Sinatra::Base
         # riders.to_json(methods: [:bike_rides])
     end
 
+    post "/riders" do
+      rider = Rider.create(
+        name: params[:name]
+      )
+      rider.to_json
+    end
+
 end
